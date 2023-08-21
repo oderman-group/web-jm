@@ -14,7 +14,9 @@ js
 media
 modal
 plugins
-panelcontrol
+panelcontrol/files
+panelcontrol/login/assets
+panelcontrol/login/admin/tinymce
 tinymce
 vsj
 agras
