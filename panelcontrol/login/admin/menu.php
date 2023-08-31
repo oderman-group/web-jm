@@ -108,6 +108,14 @@
 				</li>
 
 				<li class="start">
+					<a href="catalogos.php">
+					<i class="icon-book"></i> 
+					<span class="title">Catalogos</span>
+					<span class="selected"></span>
+					</a>
+				</li>
+
+				<li class="start">
 					<a href="usuarios.php">
 					<i class="icon-info-sign"></i> 
 					<span class="title">Sucursales</span>
