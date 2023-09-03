@@ -32,61 +32,30 @@ include("head.php");
                         </div>
                         <div class="row">
 
-                            <div class="col-md-3 col-sm-3 m-b30">
-                                <div class="wt-icon-box-wraper bx-style-1 p-a15 left clearfix">
-                                    <div class="wt-icon-box-sm bg-primary corner">
-                                        <span class="icon-cell text-white">
-                                            <i class="fa fa-file-pdf-o"></i>
-                                        </span>
-                                    </div>
-                                    <div class="icon-content">
-                                        <h5 class="wt-tilte text-uppercase">Drones</h5>
-                                        <p><a href="https://softjm.com/usuarios/files/portafolios/8.pdf" target="_blank">Ver Catalogo</a></p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-3 col-sm-3 m-b30">
-                                <div class="wt-icon-box-wraper bx-style-1 p-a15 left clearfix">
-                                    <div class="wt-icon-box-sm bg-primary corner">
-                                        <span class="icon-cell text-white">
-                                            <i class="fa fa-file-pdf-o"></i>
-                                        </span>
-                                    </div>
-                                    <div class="icon-content">
-                                        <h5 class="wt-tilte text-uppercase">Estaciones totales</h5>
-                                        <p><a href="https://softjm.com/usuarios/files/portafolios/9.pdf" target="_blank">Ver Catalogo</a></p>
+                            <?php
+								$consulta = mysqli_query($conexion,"SELECT * FROM catalogos WHERE cata_activo=1 AND cata_qrecursos=1 ORDER BY cata_posicion");
+                                while ($resultado = mysqli_fetch_array($consulta)) {
+                            ?>
+                                <div class="col-md-3 col-sm-3 m-b30">
+                                    <div class="wt-icon-box-wraper bx-style-1 p-a15 left clearfix">
+                                        <?php if(!empty($resultado["cata_imagen"])){ ?>
+                                            <div class="wt-icon-box-sm bg-primary corner">
+                                                <img src="archivos/catalogos/imgPortada/<?=$resultado["cata_imagen"];?>" style="height: 75px !important;">
+                                            </div>
+                                        <?php }else{ ?>
+                                            <div class="wt-icon-box-sm bg-primary corner">
+                                                <span class="icon-cell text-white">
+                                                    <i class="fa fa-file-pdf-o"></i>
+                                                </span>
+                                            </div>
+                                        <?php } ?>
+                                        <div class="icon-content">
+                                            <h5 class="wt-tilte text-uppercase"><?= $resultado["cata_nombre"]; ?></h5>
+                                            <p><a href="archivos/catalogos/<?=$resultado["cata_archivo"];?>" target="_blank">Ver Catalogo</a></p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="col-md-3 col-sm-3 m-b30">
-                                <div class="wt-icon-box-wraper bx-style-1 p-a15 left clearfix">
-                                    <div class="wt-icon-box-sm bg-primary corner">
-                                        <span class="icon-cell text-white">
-                                            <i class="fa fa-file-pdf-o"></i>
-                                        </span>
-                                    </div>
-                                    <div class="icon-content">
-                                        <h5 class="wt-tilte text-uppercase">Drones de agricultura</h5>
-                                        <p><a href="archivos/catalogos/agrast10.pdf" target="_blank">Ver Catalogo</a></p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-3 col-sm-3 m-b30">
-                                <div class="wt-icon-box-wraper bx-style-1 p-a15 left clearfix">
-                                    <div class="wt-icon-box-sm bg-primary corner">
-                                        <span class="icon-cell text-white">
-                                            <i class="fa fa-file-pdf-o"></i>
-                                        </span>
-                                    </div>
-                                    <div class="icon-content">
-                                        <h5 class="wt-tilte text-uppercase">Geolocalización</h5>
-                                        <p><a href="https://softjm.com/usuarios/files/portafolios/5.pdf" target="_blank">Ver Catalogo</a></p>
-                                    </div>
-                                </div>
-                            </div>
+                            <?php } ?>
 
                         </div>
                     </div>
