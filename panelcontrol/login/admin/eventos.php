@@ -117,6 +117,7 @@
 											<td><?=$etadoEventos[$resultado["eve_activo"]]?></td>
 											<td><?php if(!empty($resultado["eve_precio"])){ echo '$'.number_format($resultado["eve_precio"],0,".",".");}?></td>
                                             <td>
+												<a href="secciones.php?idEvento=<?=$resultado["eve_id"];?>"><img src="../../files/iconos/web.png"></a>
                                                 <a href="<?php if(!empty($resultado["eve_tipo"]) && $resultado["eve_tipo"]==0){echo "eventos-info.php";}else{echo "eventos-futuro-info.php";}?>?a=2&id=<?=$resultado["eve_id"];?>"><img src="../../files/iconos/edit.png"></a>
                                                 <a href="sql.php?idE=<?=$resultado["eve_id"];?>&get=1" onClick="if(!confirm('Desea eliminar este registro?')){return false;}"><img src="../../files/iconos/deletle.png"></a>
                                             </td>
