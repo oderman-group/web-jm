@@ -12,6 +12,51 @@ $eventos = mysqli_query($conexion,"SELECT * FROM eventos WHERE eve_activo=1 ORDE
 <meta name="keywords" content="Equipos de topografía en Medellin, Equipos topográficos en Colombia, Equipos para Topografía en Medellín, Jaime Mendoza, equipos topográficos, Equipos Jaime Mendoza, Jaime Mendoza Equipos Topográficos, Equipos Topograficos, Equipos de Topografía, Equipos para topografia, Equipos Topográficos en Medellin">
 <meta name="description" content="Equipos de topografía en Medellin, Equipos topográficos en Colombia, Equipos para Topografía en Medellín, Jaime Mendoza, equipos topográficos, Equipos Jaime Mendoza, Jaime Mendoza Equipos Topográficos, Equipos Topograficos, Equipos de Topografía, Equipos para topografia, Equipos Topográficos en Medellin">
 
+<style>
+    /* Imágenes: Mantén proporciones y evita recortes */
+    .wt-thum-bx img {
+        width: 100%; /* Ocupa el ancho del contenedor */
+        height: 400px; /* Escala proporcionalmente */
+        display: block; /* Elimina espacios no deseados */
+    }
+
+    /* Nombres y precios: Permite que el texto envuelva */
+    .wt-box h3 {
+        min-height: 100px; /* Altura mínima para uniformidad */
+        text-align: center;
+        word-wrap: break-word; /* Asegura que el texto se ajuste */
+        white-space: normal; /* Permite múltiples líneas */
+    }
+
+    .wt-box h5 {
+        text-align: center;
+        margin-top: 10px;
+        line-height: 1.2;
+        min-height: 30px; /* Asegura espacio consistente */
+    }
+
+    /* Contenedores uniformes: Ajusta dinámicamente */
+    .masonry-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; /* Alinea contenido al principio */
+        align-items: center; /* Centra el contenido horizontalmente */
+        height: auto; /* Ajusta según el contenido */
+        min-height: 400px; /* Mantén uniformidad entre elementos */
+        padding: 20px;
+        box-sizing: border-box; /* Asegura que padding no aumente el tamaño */
+    }
+
+    /* Diseño responsivo para pantallas pequeñas */
+    @media (max-width: 768px) {
+        .masonry-item {
+            min-height: 300px; /* Ajusta la altura mínima */
+        }
+        .wt-thum-bx img {
+            height: auto; /* Mantén proporción en pantallas pequeñas */
+        }
+    }
+</style>
 
 </head>
 
