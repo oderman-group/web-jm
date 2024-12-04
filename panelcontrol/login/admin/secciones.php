@@ -47,7 +47,7 @@ include("header.php");
 
 						<!-- BEGIN PAGE TITLE & BREADCRUMB-->
 						<h3 class="page-title">
-							Seciones<small>...</small>
+							Secciones<small>...</small>
 						</h3>
 						<ul class="breadcrumb">
 							<li>
@@ -62,7 +62,7 @@ include("header.php");
 							</li>
 
 							<li>
-								<a href="#">Seciones</a>
+								<a href="#">Secciones</a>
 							</li>
 						</ul>
 						<!-- END PAGE TITLE & BREADCRUMB-->
@@ -116,7 +116,7 @@ include("header.php");
 												<td><?= $resultado["sec_titulo"]; ?></td>
 												<td><?= $resultado["sec_posicion"]; ?></td>
 												<td><?= $resultado["sec_tamaño"]; ?> Columna</td>
-												<td><span class="label label-<?=$activo?>"><?=$resultado["sec_estado"]?></span>'</td>
+												<td><span class="label label-<?=$activo?>"><?=$resultado["sec_estado"]?></span></td>
 												<td>
 													<a href="subsecciones.php?idSeccion=<?=$resultado["sec_id"];?>&idEvento=<?=$_GET['idEvento'];?>"><img src="../../files/iconos/web.png"></a>
 													<a href="secciones-editar.php?idSeccion=<?= $resultado['sec_id']; ?>&idEvento=<?=$_GET['idEvento'];?>"><img src="../../files/iconos/edit.png"></a>
