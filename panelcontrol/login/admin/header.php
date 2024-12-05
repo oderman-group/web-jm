@@ -32,3 +32,5 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 	<link href="../assets/css/themes/default.css" rel="stylesheet" type="text/css" id="style_color"/>
 	<link href="../assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
 	<!-- END GLOBAL MANDATORY STYLES -->
+	<link href="../assets/css/tooltip.css" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/e84fa1cf78.js" crossorigin="anonymous"></script>
