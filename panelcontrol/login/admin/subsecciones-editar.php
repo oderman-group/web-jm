@@ -140,7 +140,7 @@ include("header.php");
 									<div class="control-group" id="contenidoVideo" style="display: none;">
 										<label class="control-label">Código de Video</label>
 										<div class="controls">
-											<input type="text" class="span4 m-wrap" value="<?=$resultado["subsec_contenido"] ?? ''?>" name="contenidoVideo"/>
+											<input type="text" class="span4 m-wrap" value="<?=!empty($resultado["subsec_contenido"]) && $resultado["subsec_tipo"] == 'VIDEO' ? $resultado["subsec_contenido"] : ''?>" name="contenidoVideo"/>
 											<img src="../../files/imagenes-generales/CodigoYoutube.png">
 										</div>
 									</div>
@@ -148,7 +148,7 @@ include("header.php");
 									<div class="control-group" id="contenidoTexto" style="display: none;">
 										<label class="control-label">Texto</label>
 										<div class="controls">
-										<textarea class="span12 ckeditor m-wrap" name="contenidoTexto" rows="6"><?=$resultado["subsec_contenido"] ?? ''?></textarea>
+										<textarea class="span12 ckeditor m-wrap" name="contenidoTexto" rows="6"><?=!empty($resultado["subsec_contenido"]) && $resultado["subsec_tipo"] == 'TEXTO' ? $resultado["subsec_contenido"] : ''?></textarea>
 										</div>
 									</div>
                                     
